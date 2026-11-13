@@ -1,0 +1,11 @@
+node_modules/
+.expo/
+dist/
+web-build/
+.env
+.env.local
+*.db
+*.db-shm
+*.db-wal
+coverage/
+.DS_Store
