@@ -1,0 +1,27 @@
+{
+  "expo": {
+    "name": "FindBack",
+    "slug": "findback",
+    "version": "0.1.0",
+    "orientation": "portrait",
+    "userInterfaceStyle": "light",
+    "scheme": "findback",
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "de.findback.prototype"
+    },
+    "android": { "package": "de.findback.prototype" },
+    "web": { "bundler": "metro", "name": "FindBack" },
+    "plugins": [
+      "expo-sqlite",
+      [
+        "expo-image-picker",
+        {
+          "photosPermission": "Wähle ein Foto für deine Fund- oder Verlustmeldung aus.",
+          "cameraPermission": false,
+          "microphonePermission": false
+        }
+      ]
+    ]
+  }
+}

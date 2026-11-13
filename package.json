@@ -1,0 +1,36 @@
+{
+  "name": "findback",
+  "version": "0.1.0",
+  "private": true,
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "start": "npm run start -w @findback/mobile --",
+    "android": "npm run android -w @findback/mobile --",
+    "ios": "npm run ios -w @findback/mobile --",
+    "web": "npm run web -w @findback/mobile --",
+    "api": "npm run dev -w @findback/api",
+    "typecheck": "tsc --noEmit",
+    "test": "tsx --test tests/*.test.ts",
+    "check": "npm run typecheck && npm test",
+    "format": "prettier --write \"apps/**/*.{ts,tsx,json}\" \"packages/**/*.ts\" \"tests/**/*.ts\" \"docs/*.md\" README.md package.json tsconfig.json",
+    "format:check": "prettier --check \"apps/**/*.{ts,tsx,json}\" \"packages/**/*.ts\" \"tests/**/*.ts\" \"docs/*.md\" README.md package.json tsconfig.json"
+  },
+  "devDependencies": {
+    "@types/node": "^22.15.0",
+    "@types/react": "~19.2.0",
+    "prettier": "^3.10.1",
+    "tsx": "^4.20.0",
+    "typescript": "~5.9.2"
+  },
+  "engines": {
+    "node": ">=22.13.0"
+  },
+  "overrides": {
+    "@expo/fingerprint": {
+      "minimatch": "11.0.1"
+    }
+  }
+}
